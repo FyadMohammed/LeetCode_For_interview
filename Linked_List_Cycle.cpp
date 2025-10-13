@@ -23,7 +23,7 @@ public:
     bool hasCycle(ListNode *head) {
         ListNode *fast_ptr = head;
         ListNode *slow_ptr = head;
-        while(fast_ptr != nullptr || fast_ptr->next != nullptr){
+        while(fast_ptr != nullptr && fast_ptr->next != nullptr){
             
             fast_ptr = fast_ptr->next->next;
             slow_ptr = slow_ptr->next;
